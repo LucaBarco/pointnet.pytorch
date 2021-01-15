@@ -104,7 +104,8 @@ class ShapeNetDataset(data.Dataset):
                 ls = line.strip().split()
                 self.seg_classes[ls[0]] = int(ls[1])
         self.num_seg_classes = self.seg_classes[list(self.cat.keys())[0]]
-        print(self.seg_classes, self.num_seg_classes)
+        print(self.seg_classes)
+        print(self.num_seg_classes)
 
     def __getitem__(self, index):
         fn = self.datapath[index]
